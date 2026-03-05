@@ -145,159 +145,71 @@ src/main/java/com/cesde/pi
 
 🚀 Guía de Pruebas y Documentación
 
-1. Crear un nuevo estudiante
-   Método: POST
-   URL: http://localhost:8080/api/students
-   Cuerpo de la Petición (JSON):
-   {
-   "firstName": "Ana",
-   "lastName": "García",
-   "email": "ana.garcia@estudiante.com",
-   "birthDate": "2001-03-12",
-   "phone": "3004445566"
-   }
-   Respuesta del Servidor (Completar):
-   {
-   "firstName": "victoria",
-   "lastName": "Usma",
-   "email": "vicky@gmail.com",
-   "birthDate": "2000-01-15",
-   "id": 7,
-   "phone": "2762426"
-   }
+11. Crear un nuevo estudiante
 
-Código de Estado (Status Code):
-201 Created
+Método: POST
+
+URL: http://localhost:8080/api/students
+
+Cuerpo (JSON):
+
+JSON
+{
+"firstName": "Victoria",
+"lastName": "Usma",
+"email": "vicky@gmail.com",
+"birthDate": "2000-01-15",
+"phone": "2762426"
+}
+Respuesta del Servidor:
+
+JSON
+{
+"id": 7,
+"firstName": "Victoria",
+"lastName": "Usma",
+"email": "vicky@gmail.com",
+"birthDate": "2000-01-15",
+"phone": "2762426"
+}
+Código de Estado: 201 Created
 
 2. Obtener la lista completa
-   Método: GET
-   URL: http://localhost:8080/api/students
-   Respuesta del Servidor (Completar):
 
-[
-{
-"firstName": "Juan",
-"lastName": "Pérez",
-"email": "juan.perez@example.com",
-"birthDate": "2000-01-15",
-"id": 3,
-"phone": "1234567890"
-},
-{
-"firstName": "Juliana",
-"lastName": "Molina",
-"email": "juan.molina@example.com",
-"birthDate": "2000-01-15",
-"id": 4,
-"phone": "1234567890"
-},
-{
-"firstName": "Luisa",
-"lastName": "Sanchez",
-"email": "lusanchez@example.com",
-"birthDate": "2000-01-15",
-"id": 5,
-"phone": "1234567890"
-},
-{
-"firstName": "LuPedroisa",
-"lastName": "Morales",
-"email": "perucho@example.com",
-"birthDate": "2000-01-15",
-"id": 6,
-"phone": "1234567890"
-},
-{
-"firstName": "victoria",
-"lastName": "Usma",
-"email": "vicky@gmail.com",
-"birthDate": "2000-01-15",
-"id": 7,
-"phone": "2762426"
-}
-]
+Método: GET
 
-Código de Estado (Status Code):
-200 OK
+URL: http://localhost:8080/api/students
 
-3. Buscar estudiante por ID (Existente)
-   Método: GET
-   URL: http://localhost:8080/api/students/3
-   Respuesta del Servidor (Completar):
-
-{
-"firstName": "Juan",
-"lastName": "Pérez",
-"email": "juan.perez@example.com",
-"birthDate": "2000-01-15",
-"id": 3,
-"phone": "1234567890"
-}
-
-Código de Estado (Status Code):
-200 OK
-
-4. Buscar estudiante por Email
-   Método: GET
-   URL: http://localhost:8080/api/students/email/vicky@gmail.com
-   Respuesta del Servidor (Completar):
-
-{
-"firstName": "victoria",
-"lastName": "Usma",
-"email": "vicky@gmail.com",
-"birthDate": "2000-01-15",
-"id": 7,
-"phone": "2762426"
-}
-
-Código de Estado (Status Code):
-200 OK
+Código de Estado: 200 OK
 
 5. Actualizar datos del estudiante
-   Método: PUT
-   URL: http://localhost:8080/api/students/7
-   Cuerpo de la Petición (JSON):
-   {
-   "firstName": "Ana María",
-   "lastName": "García",
-   "email": "ana.garcia@estudiante.com",
-   "birthDate": "2001-03-12",
-   "phone": "3119998877"
-   }
-   Respuesta del Servidor (Completar):
 
+Método: PUT
+
+URL: http://localhost:8080/api/students/7
+
+Cuerpo (JSON):
+
+JSON
 {
-"firstName": "victoria",
+"firstName": "Victoria Eugenia",
 "lastName": "Usma",
 "email": "vicky@gmail.com",
 "birthDate": "2000-01-15",
-"id": 7,
-"phone": "2762423"
+"phone": "3119998877"
 }
+Respuesta del Servidor:
 
-Código de Estado (Status Code):
-200 OK
-
-6. Escenario de Error: Buscar ID inexistente
-   Método: GET
-   URL: http://localhost:8080/api/students/999
-   Respuesta del Servidor (Completar):
-
-404 Not Found
-
-Código de Estado (Status Code):
-404 Not Found
-
-7. Eliminar el registro
-   Método: DELETE
-   URL: http://localhost:8080/api/students/3
-   Respuesta del Servidor (Completar):
-
-204 No Content
-
-Código de Estado (Status Code):
-204 No Content
+JSON
+{
+"id": 7,
+"firstName": "Victoria Eugenia",
+"lastName": "Usma",
+"email": "vicky@gmail.com",
+"birthDate": "2000-01-15",
+"phone": "3119998877"
+}
+Código de Estado: 200 OK
 
 📝 Cuestionario de Análisis
 Instrucciones: Responda las siguientes preguntas basándose en su experiencia durante el laboratorio y el código del proyecto.
